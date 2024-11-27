@@ -1,0 +1,189 @@
+/* Основной файл */
+@import url("https://shiki-theme.web.app/stable/main.css");
+/* Шрифт Roboto */
+@import url("https://shiki-theme.web.app/stable/font-roboto.css");
+@import url("https://css-club.web.app/css/history_types.css");
+
+/* Настройки переменных темы */
+@media{:root {
+  /* Цвета текстов */
+  --color-text-primary: #ffffffcb;
+  --color-text-secondary: #b3b3b3d8;
+  --color-text-hint: #929292;
+  --color-text-disabled: #6c6c6c;
+  --color-overlay-text-hovered: rgba(224, 224, 224, 0.089);
+  --color-overlay-text-selected: rgba(99, 99, 99, 0.08);
+  --color-overlay-text-pressed: rgba(107, 107, 107, 0.24);
+  /* Цвет ссылок */
+  --color-link: #ffffff;
+  --color-link-hover: #ca983a;
+  --color-link-active: #c0c23c8a;
+  /* Основной цвет */
+  --color-primary: #8a6ccfa2;
+  --color-text-on-primary: #e6e3ef;
+  --color-primary-reduced: #6e50af80;
+  --color-primary-hovered: #51378e85;
+  --color-primary-pressed: #6a549c;
+  --color-overlay-primary-hovered: rgba(66, 38, 132, 0.08);
+  --color-overlay-primary-selected: rgba(66, 38, 132, 0.12);
+  --color-overlay-primary-pressed: rgba(66, 38, 132, 0.16);
+  /* Акцентирующий цвет */
+  --color-accent: #23b8bdad;
+  --color-text-on-accent: #001c1a;
+  --color-accent-reduced: #2da79c;
+  --color-accent-fade: #0b7268;
+  --color-overlay-accent-hovered: rgba(3, 218, 197, 0.08);
+  --color-overlay-accent-selected: rgba(3, 218, 197, 0.12);
+  --color-overlay-accent-pressed: rgba(3, 218, 197, 0.16);
+  /* Фоновые цвета */
+  --color-background: rgba(0, 0, 0, 0.788);
+  --color-background-translucent: rgba(0, 0, 0, 0.671);
+  --color-background-dialog: #1f1f1f;
+  --color-surface: #1c1c1c;
+  --color-surface-hover: #2e2e2e;
+  --color-surface-active: #373737;
+  --color-border: #2e2e2e;
+  /* Цвета верхнего меню */
+  --color-menu-background: rgba(0,0,0,0.5);
+  --color-menu-backgrocgba(31, 31, 31, 0.48);
+  --color-menu-text-primary: #e2e2e2;
+  --color-menu-text-disabled: #747474;
+  --color-menu-icon: #c9c9c9;
+  --color-menu-search: #3a3a3a;
+  --color-menu-search-fade: rgba(226, 226, 226, 0.12);
+  --color-menu-background-hover: #313131;
+  --color-menu-background-active: #3a3a3a;
+  /* Цвета кнопок списков */
+  --color-planned: #32515e;
+  --color-onhold: #3f3f3f;
+  --color-watching: #2a414b;
+  --color-rewatching: #2a414b;
+  --color-completed: #3d462c;
+  --color-dropped: #472221;
+
+  /* Обложка профиля */
+  --user-cover: url("");
+  /* Фон сайта */
+  --user-background: url("https://wallpaperaccess.com/full/4132000.jpg");
+
+}
+
+.bar.simple .bar.s3 { background: #707070;}
+.bar.simple .bar:hover.s3 { background: #7a7a7abd;}
+.bar.simple .bar.s2 { background: #a5a5a5;}
+.bar.simple .bar:hover.s2 { background: #929292a6;}
+.bar.simple .bar.s1 { background: #cacaca;}
+.bar.simple .bar:hover.s1 { background: #c4c4c485;}
+.bar.simple .bar.s0 { background: #ffffff;}
+.bar.simple .bar:hover.s0 { background: #ffffff63;}
+
+.activity .graph.vertical .line .bar {
+    box-sizing: content-box;
+    transform: translateY(1px);
+    transform-origin: center bottom;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation-name: activity;
+  }
+  .activity .graph.vertical .line .bar:hover {
+    animation-name: none;
+    transform: none;
+  }
+  .activity .graph.vertical .line:nth-of-type(6n+2) .bar {
+    animation-delay: -.25s;
+  }
+  .activity .graph.vertical .line:nth-of-type(6n+4) .bar {
+    animation-delay: -.5s;
+  }
+  .activity .graph.vertical .line:nth-of-type(6n+3) .bar {
+    animation-delay: -.75s;
+  }
+  .activity .graph.vertical .line:nth-of-type(6n+6) .bar {
+    animation-delay: -1s;
+  }
+  .activity .graph.vertical .line:nth-of-type(6n+5) .bar {
+    animation-delay: -1.25s;
+  }
+  @keyframes activity {
+    0%, 100% {
+      transform: translateY(1px);
+    }
+    50% {
+      transform: translateY(7px);
+    }
+  }
+
+  .p-profiles .profile-head .avatar {
+    background: url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMm1wODM3dzFvaHd6OWlqeHJpMGxuMWNrdDg4OTJ3b21qc29xNWUyciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/FPC5S2CmvwHvy/giphy.webp") center / cover;
+    border-radius: 50%;
+    background-color: lightgreen;
+  }
+  
+  .p-profiles .profile-head .avatar img {
+    visibility: hidden;
+  }
+
+  /* Forked pen: https://codepen.io/uiswarup/pen/XWgQJrq */
+#profiles_show .profile-head .c-brief header h1 {
+    background-image: linear-gradient(
+      -225deg,
+      #ffffff 0%,
+      #9c9c9ce5 29%,
+      #ffffff 67%,
+      #9d9c9efb 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: bold;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    animation: u-nikcname-animbg 2s linear infinite;
+  }
+  
+  @keyframes u-nikcname-animbg {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+  body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Изображения снега: */
+    background-image: url("https://i.imgur.com/TpOI4DC.png"),
+                      url("https://i.imgur.com/92lgmBN.png"),
+                      url("https://i.imgur.com/ACiIkIG.png");
+    /* Размер изображений по порядку: */
+    /* (размер уменьшен в 2 раза: снежинки больше похожи на точки, чем на  детские рисунки */
+    /* (можно удалить) */
+    background-size: 250px, 200px, 150px;
+    /* Скорость анимации: */
+    /* (чем больше время, тем медленнее идет снег) */
+    animation: snow 16s linear infinite;
+  }
+  
+  /* Анимация снега */
+  @keyframes snow {
+    0% {
+      background-position: 0px 0px,
+                           0px 0px,
+                           0px 0px;
+    }
+    100% {
+      /* (Указан полный размер изображений по прядку, указанному в body:before) */
+      background-position: 500px 1000px,
+                           400px 400px,
+                           300px 300px;
+    }
+  }
+  
+  
